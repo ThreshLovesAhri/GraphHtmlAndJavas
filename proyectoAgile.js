@@ -76,10 +76,10 @@ new Morris.Bar({
     // chart.
     labels: ['Value']
 });
-function changeGraph(mango){
+function changeGraph(){
 switch (mango) {
     case 0:
-        new Morris.Bar({
+         Morris.Bar({
             // ID of the element in which to draw the chart.
             element: 'myfirstchart',
             // Chart data records -- each entry in this array corresponds to a point on

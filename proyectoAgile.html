@@ -19,8 +19,9 @@
   </header>
   <body>
     <form name="DataSelect" id="DataSelect" action="#">
+      
       <label >Categories</label>
-      <select name="Categories" id="Sel1" onchange="changeProduct(); changeGraph(mango)"  >
+      <select name="Categories" id="Sel1" onchange="changeGraph(); changeProduct()"  >
         <option value="0">Pick Up One</option>
         <option value="1">Food</option>
         <option value="2">Cars</option>
@@ -50,8 +51,9 @@
   <script src="proyectoAgile.js" charset="utf-8">
   </script>
   <script  type="text/javascript">
-   var mango= document.DataSelect.Categories[document.DataSelect.Categories.selectedIndex].value;
+   this.mango= document.DataSelect.Categories[document.DataSelect.Categories.selectedIndex].value;
    console.log(mango);
+  
   </script>
     
   </body>
