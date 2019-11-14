@@ -8,13 +8,15 @@ header{
     align-content: center;
     height: 100%;
     width: 100%;
+    display: block;
 }
-header div{
+header div div{
     width: 35px;
-    height: 5px;
-    background-color:black;
-    margin: 6px ;
-    align-content:center;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  align-content: center;
+  box-sizing: border-box;
 }
 
 header label{
