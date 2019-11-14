@@ -11,9 +11,31 @@
     <script src="libs/morris.min.js" charset="utf-8"></script>
     <title>Graphs for Agile</title>
   </head>
+  <header>
+      <div></div>
+      <div></div>
+      <div></div>
+      <label>Sales Report</label>
+  </header>
   <body>
+    <form name="DataSelect" id="DataSelect" action="#">
+      <label >Categories</label>
+      <select name="Categories" id="Sel1" onchange="changeProduct()" >
+        <option value="0">Pick Up One</option>
+        <option value="1">Food</option>
+        <option value="2">Cars</option>
+        <option value="3">Devices</option>
+      </select>
+      <label>Product</label>
+      <select name="Product" id="Sel2" onchange="changeBrand()">
+        <option value="-">-
+      </select>
+      <label>Brand</label>
+      <select name="Brand" id="Sel3" >
+        <option value="-">-
+      </select>
+    </form>
     <div class="container">
-      <h1>Graficas</h1>
       <hr>
         <div class="row">
           <div class="col-md-6">
@@ -25,7 +47,9 @@
         </div>
           
     </div>
-  <script src="proyectoAgile.js" charset="utf-8"></script>
+  <script src="proyectoAgile.js" charset="utf-8">
+  </script>
+    
   </body>
 
 </html>
