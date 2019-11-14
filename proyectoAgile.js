@@ -12,8 +12,9 @@ var Dev_1 = new Array("Samsung", "Huawei", "Xiomi");
 var Dev_2 = new Array("Iphone", "Toshiba", "Samsung");
 var Dev_3 = new Array("ASUS", "DELL", "Lenovo");
 
-var selection;
+
 function changeProduct() {
+    var selection;
     selection = document.DataSelect.Categories[document.DataSelect.Categories.selectedIndex].value;
     if (selection != 0) {
         var mis_opts = eval("opt_" + selection);
@@ -23,13 +24,16 @@ function changeProduct() {
             document.DataSelect.Product.options[i].value = mis_opts[i];
             document.DataSelect.Product.options[i].text = mis_opts[i];
         }
+
     } else {
         document.DataSelect.Product.length = 1;
         document.DataSelect.Product.options[0].value = "-";
         document.DataSelect.Product.options[0].text = "-";
     }
     document.DataSelect.Product.options[0].selected = true;
+    
 }
+
 
 function changeBrand() {
     var selecProd;
@@ -50,33 +54,31 @@ function changeBrand() {
             }
     document.DataSelect.Brand.options[0].selected = true;
     
+    
 }
+new Morris.Bar({
+    // ID of the element in which to draw the chart.
+    element: 'myfirstchart',
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
 
-var mango =  1;
-switch(mango) {
-    case 1:
-    new Morris.Bar({
-        // ID of the element in which to draw the chart.
-        element: 'myfirstchart',
-        // Chart data records -- each entry in this array corresponds to a point on
-        // the chart.
-
-        data:
-            [
-                { Branch: 'Meat', value: 19 },
-                { Branch: 'Milk', value: 21 },
-                { Branch: 'Vegetables', value: 11 },
-            ],
-        // The name of the data record attribute that contains x-values.
-        xkey: 'Branch',
-        // A list of names of data record attributes that contain y-values.
-        ykeys: ['value'],
-        // Labels for the ykeys -- will be displayed when you hover over the
-        // chart.
-        labels: ['Value']
-    });
-    break;
-    case 2:
+    data:
+        [
+            { Branch: 'Text1', value: 0 },
+            { Branch: 'Text2', value: 0 },
+            { Branch: 'Text3', value: 0 },
+        ],
+    // The name of the data record attribute that contains x-values.
+    xkey: 'Branch',
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    // Labels for the ykeys -- will be displayed when you hover over the
+    // chart.
+    labels: ['Value']
+});
+function changeGraph(mango){
+switch (mango) {
+    case 0:
         new Morris.Bar({
             // ID of the element in which to draw the chart.
             element: 'myfirstchart',
@@ -85,9 +87,9 @@ switch(mango) {
 
             data:
                 [
-                    { Branch: 'PikUp', value: 5 },
-                    { Branch: 'Minivan', value: 10 },
-                    { Branch: '4x4', value: 13 },
+                    { Branch: 'Text1', value: 0 },
+                    { Branch: 'Text2', value: 0 },
+                    { Branch: 'Text3', value: 0 },
                 ],
             // The name of the data record attribute that contains x-values.
             xkey: 'Branch',
@@ -98,26 +100,48 @@ switch(mango) {
             labels: ['Value']
         });
         break;
+    case 1:
+        new Morris.Bar({
+            element: 'myfirstchart',
+            data:
+                [
+                    { Branch: 'Meat', value: 19 },
+                    { Branch: 'Milk', value: 21 },
+                    { Branch: 'Vegetables', value: 11 },
+                ],
+            xkey: 'Branch',
+            ykeys: ['value'],
+            labels: ['Value']
+        });
+        break;
+    case 2:
+        new Morris.Bar({
+            element: 'myfirstchart',
+            data:
+                [
+                    { Branch: 'PikUp', value: 5 },
+                    { Branch: 'Minivan', value: 10 },
+                    { Branch: '4x4', value: 13 },
+                ],
+            xkey: 'Branch',
+            ykeys: ['value'],
+            labels: ['Value']
+        });
+        break;
     case 3:
         new Morris.Bar({
-            // ID of the element in which to draw the chart.
             element: 'myfirstchart',
-            // Chart data records -- each entry in this array corresponds to a point on
-            // the chart.
-
             data:
                 [
                     { year: 'Cellphones', value: 20 },
                     { year: 'Tablets', value: 10 },
                     { year: 'Laptops', value: 5 },
                 ],
-            // The name of the data record attribute that contains x-values.
             xkey: 'year',
-            // A list of names of data record attributes that contain y-values.
             ykeys: ['value'],
-            // Labels for the ykeys -- will be displayed when you hover over the
-            // chart.
             labels: ['Value']
         });
         break;
+}
+
 }

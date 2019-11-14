@@ -20,14 +20,14 @@
   <body>
     <form name="DataSelect" id="DataSelect" action="#">
       <label >Categories</label>
-      <select name="Categories" id="Sel1" onchange="changeProduct()" >
+      <select name="Categories" id="Sel1" onchange="changeProduct(); changeGraph(mango)"  >
         <option value="0">Pick Up One</option>
         <option value="1">Food</option>
         <option value="2">Cars</option>
         <option value="3">Devices</option>
       </select>
       <label>Product</label>
-      <select name="Product" id="Sel2" onchange="changeBrand()">
+      <select name="Product" id="Sel2" onchange="changeBrand()" >
         <option value="-">-
       </select>
       <label>Brand</label>
@@ -41,13 +41,17 @@
           <div class="col-md-6">
             <h2>Grafica de Linea</h2>
             <hr>
-            <div id="myfirstchart"></div>
+            <div id="myfirstchart" ></div>
           </div>
           
         </div>
           
     </div>
   <script src="proyectoAgile.js" charset="utf-8">
+  </script>
+  <script  type="text/javascript">
+   var mango= document.DataSelect.Categories[document.DataSelect.Categories.selectedIndex].value;
+   console.log(mango);
   </script>
     
   </body>
